@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>BIG-REMONT</title>
+	<link rel="ico" type="image/png" href="favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<link rel="stylesheet" href="css/res__sass.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/mods.min.css"/>
+</head>
+<body>
+	<header class="header">
+		
+	</header>
+	<main>
+		
+	</main>
+	<footer>
+		
+	</footer>
+	<div class="modal">
+    <div class="box-modal" id="exampleModal">
+        <div class="box-modal_close arcticmodal-close close_modalka">закрыть</div>
+        <form id="application" action=" application.php" method="POST" name=" application">
+					 <input name="name" id="zayavkaName" maxlength="20" placeholder="Введите ваше имя" required />
+					 <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required />
+					 <input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required/>
+					 <button class="applicationButton" type="submit" form="application">Заказать</button>
+					 <div>
+					 	<div>
+					 		<input type="checkbox" class="checkbox" id="checkbox" />
+					 		<label for="checkbox" id="chek"></label>
+					 	</div>
+					 	<button type="button" class="confirm">Я согласен на обработку моих персональных данных для оформления заказа</button>
+					 </div>
+				</form>
+    </div>
+</div>
+ <div class="modal_confs">
+    <div class="box-modal" id="exampleModal">
+        <div class="box-modal_close arcticmodal-close close_confirm">закрыть</div>
+        <p>
+        	"Обработка персональных данных Лица может осуществляться с помощью средств автоматизации и/или без использования средств автоматизации в соответствии с действующим законодательством РФ и положениями Компании. Настоящим Лицо соглашается на передачу своих персональных данных третьим лицам для их обработки в соответствии с целями, предусмотренными настоящим согласием, на основании договоров, заключенных Компанией с этими лицами, персональные данные Лица могут передаваться внутри группы лиц ООО «Интернет-магазин», включая трансграничную передачу. Настоящее согласие Лица на обработку его/ее персональных данных, указанных при оформлении заказа на сайте Компании, направляемых (заполненных) с использованием настоящего сайта, действует с момента оформления заказа на сайте Компании до момента его отзыва. Согласие на обработку персональных данных, указанных при оформлении заказа на сайте Компании, направляемых (заполненных) с использованием настоящего сайта, может быть отозвано Лицом при подаче письменного заявления (отзыва) в Компанию. Обработка персональных данных Лица прекращается в течение 2 месяцев с момента получения Компанией письменного заявления (отзыва) Лица и/или в случае достижения цели обработки и уничтожается в срок и на условиях, установленных законом, если не предусмотрено иное. Обезличенные персональные данные Лица могут использоваться Компанией в статистических (и иных исследовательских целей) после получения заявления (отзыва) согласия, а также после достижения целей, для которых настоящее согласие было получено. Настоящим Лицо при регистрации на сайте Компании подтверждает достоверность указанной информации"
+        </p>
+    </div>
+</div>
+
+<script src="js/libs.min.js"></script>	
+  <script src="js/owl.carousel.min.js"></script> 
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript">
+		$(function(){
+				//$('#exampleModal').arcticmodal();
+				$('.modall').click(function(){
+					$('#exampleModal').fadeIn(400); //показываем всплывающее окно
+					$('.modal').addClass("nova"); //показываем всплывающее окно
+				});
+				$('.close_modalka').click(function(){
+					$('.modal').removeClass("nova"); //показываем всплывающее окно
+				});
+				$('.close_confirm').click(function(){
+					$('.modal_confs').removeClass("nova"); //показываем всплывающее окно
+				});
+				$('.confirm').click(function(){
+					$('.modal_confs').addClass("nova"); //показываем всплывающее окно
+				});
+		});
+
+		$("[data-porfolio]").fancybox({
+					margin : [44,0,22,0],
+						thumbs : {
+							autoStart : true
+						}
+				});
+	</script>
+  <script src="js/app.js"></script>
+</body>
+</html>
